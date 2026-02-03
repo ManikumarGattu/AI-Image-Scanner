@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PWA Image Scanner using TensorFlow.js for real-time object detection" />
+
+  <!-- Title -->
+  <title>AI Image Scanner | Fracaso Task</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" href="assets/icons/icon-192.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1>AI Image Scanner</h1>
+    <p>Progressive Web App powered by TensorFlow.js</p>
+  </header>
+
+  <!-- Main App -->
+  <main class="container">
+    <!-- Image Input -->
+    <section class="card">
+      <h2>Capture or Upload Image</h2>
+
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        capture="environment"
+      />
+
+      <div class="image-preview">
+        <img id="previewImage" src="assets/placeholder.png" alt="Preview" />
+      </div>
+
+      <button id="scanBtn" class="primary-btn">
+        Scan Image
+      </button>
+    </section>
+
+    <!-- Result Section -->
+    <section class="card result-card">
+      <h2>Detection Result</h2>
+      <div id="result">
+        <p class="muted-text">No image scanned yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>© 2026 Mani Kumar | AI/ML Internship Task</p>
+  </footer>
+
+  <!-- TensorFlow model abstraction -->
+  <script src="js/tf-model.js"></script>
+
+  <!-- Camera and image handling -->
+  <script src="js/camera.js"></script>
+
+  <!-- Main app logic -->
+  <script src="js/app.js"></script>
+
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+          .then(() => console.log("Service Worker registered"))
+          .catch(err => console.error("SW registration failed", err));
+      });
+    }
+  </script>
+</body>
+</html>
