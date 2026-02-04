@@ -117,9 +117,9 @@ AI-Image-Scanner/
 
 ### 🔹 Detection Result Screen (After Scan)
 
-![Detection Result (Image Upload)](screenshots/result 1.png)
+![Detection Result (Image Upload)](screenshots/result1.png)
 
-![Detection Result (Camera Capture)](screenshots/result 2.png)
+![Detection Result (Camera Capture)](screenshots/result2.png)
 
 
 ---
