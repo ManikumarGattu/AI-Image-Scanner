@@ -179,12 +179,6 @@ http://localhost:5500
 
 ---
 
-## 🎤 Interview‑Ready Explanation (60 Seconds)
-
-> “AI Image Scanner is a Progressive Web App that allows users to upload or capture images and perform real‑time object detection using TensorFlow.js. The application uses a clean modular architecture where AI logic, camera handling, and UI logic are separated. All inference is performed client‑side using the COCO‑SSD model, and the app supports offline usage through service workers. This project demonstrates my practical understanding of AI integration, PWA concepts, and modern frontend engineering.”
-
----
-
 ## 🧩 Challenges Faced & Solutions
 
 * **Service Worker caching issues** → Resolved by cache control & unregistering stale workers
