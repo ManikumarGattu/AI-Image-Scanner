@@ -229,3 +229,34 @@ input[type="file"]:hover {
     padding: 1.5rem;
   }
 }
+
+.secondary-btn {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.camera-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#cameraStream {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

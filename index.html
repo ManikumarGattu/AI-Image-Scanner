@@ -43,6 +43,15 @@
         accept="image/*"
         capture="environment"
       />
+      <!-- Camera Controls -->
+      <button id="cameraBtn" class="secondary-btn">Use Camera</button>
+
+      <div class="camera-box" style="display:none;">
+        <video id="cameraStream" autoplay playsinline></video>
+        <button id="captureBtn" class="primary-btn">Capture Image</button>
+      </div>
+
+      <canvas id="captureCanvas" style="display:none;"></canvas>
 
       <div class="image-preview">
         <img id="previewImage" src="assets/placeholder.png" alt="Preview" />
@@ -57,7 +66,7 @@
     <section class="card result-card">
       <h2>Detection Result</h2>
       <div id="result">
-        <p class="muted-text">No image scanned yet.</p>
+        <p class="muted-text">Scan an image to see AI detection results.</p>
       </div>
     </section>
   </main>
@@ -78,7 +87,7 @@
 
 
   <!-- Service Worker Registration -->
-  <script>
+  <!-- <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js")
@@ -86,6 +95,6 @@
           .catch(err => console.error("SW registration failed", err));
       });
     }
-  </script>
+  </script> -->
 </body>
 </html>

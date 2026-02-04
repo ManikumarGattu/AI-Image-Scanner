@@ -15,16 +15,18 @@ async function loadModel() {
 }
 
 async function detect(image) {
-  if (!model) {
-    throw new Error("Model not loaded");
-  }
+  tf.engine().startScope();
 
   const predictions = await model.detect(image);
+
+  tf.engine().endScope();
+
   return predictions.map(p => ({
     label: p.class,
     confidence: (p.score * 100).toFixed(2)
   }));
 }
+
 
 function isReady() {
   return model !== null;

@@ -1,10 +1,12 @@
-const CACHE_NAME = "ai-image-scanner-v1";
+const CACHE_NAME = "ai-image-scanner-v2";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
   "/manifest.json",
   "/css/styles.css",
   "/js/app.js",
+  "/js/tf-model.js",
+  "/js/camera.js",
   "/assets/placeholder.png"
 ];
 
