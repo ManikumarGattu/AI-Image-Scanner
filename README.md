@@ -207,16 +207,4 @@ These challenges strengthened real‑world debugging and architectural skills.
 ## 👨‍💻 Author
 
 **Mani Kumar**
-AI / ML Internship Candidate
-
----
-
-## ⭐ Final Note
-
-This project is built with **real‑world engineering standards**, focusing on **clarity, performance, and professionalism**. It represents not just a task submission, but a **production‑ready AI web application**.
-
-If you like this project, feel free to ⭐ star the repository!
-
----
-
-Thank you for reviewing this project 🙏
+AI / ML Enthusiast
